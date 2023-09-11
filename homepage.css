@@ -1,0 +1,117 @@
+
+/* background colors */
+:root{
+    --dark: #06283D;
+    --dark1: #1363DF;
+    --light: #47B5FF;
+    --light1: #DFF6FF;
+}
+/* header section ......*/
+/*  ........................................................................*/
+header{
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 20px;
+}
+.head{
+    color: var(--light1);
+    font-size: 300%;
+    font-style: oblique;
+    justify-content: baseline;
+}
+.headlogo{
+    height: 100px;
+    width: 100px;
+}
+.accountlogo{
+    height: 50px;
+    width: 50px;
+}
+.rightimg{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    margin-left: 95%;
+    margin-top: 2%;
+}
+/*  ........................................................................*/
+/* header section end */
+.body{
+    background-color: var(--light);
+    margin-left: -8px;
+    margin-right: -8px;
+    height: 600px;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    display: grid;
+}
+
+.record{
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+    width: 50%;
+    height: 100px;
+    margin-left: 25%;
+    color: var(--light1);
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.searchbar{
+    display: flex;
+    width: 48%;
+    height: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    background-color: var(--light1);
+    border-radius: 5px;    
+    border: var(--dark1) 4px solid;
+}
+.searchcourses{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 0%;
+    text-decoration: none;
+    background-color: var(--light1);
+}
+#search{
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#search-button, #signup, #login{
+    background-color: var(--dark);
+    color: var(--light1);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 35px;
+}
+#signup, #login{
+   height: 40px;
+   width: 100px;
+}
+
+.signupin{
+    display: flex;
+    width: 48%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    justify-content: space-evenly;
+}
