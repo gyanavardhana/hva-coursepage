@@ -192,7 +192,7 @@ input[type=checkbox] {
     float: left;
     margin-top: 3px;
 }
-.diagonal.part-1{
+.diagonal.part-1 {
     position: relative;
     transition: all 0.3s;
     box-sizing: border-box;
