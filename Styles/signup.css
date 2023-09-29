@@ -1,0 +1,83 @@
+:root{
+    --not: #F1F6F9;
+    --light01: white;
+    --dark01: black;
+}
+/*---------------------------------body section-------------------------*/
+body{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    background-color: var(--not); 
+    background-image: url(images/back2.png);
+    background-repeat: mo-repeat;
+    background-size: cover;
+    
+}
+/*-------------------------------body section end-------------------------------------*/
+/*---------------------------------form section-------------------------*/
+h1{
+    text-align: center;
+}
+fieldset{
+    width: 600px;
+    height: 600px;
+    background-color: var(--light01);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: none;
+    box-shadow: 2px 0px 4px 6px rgba(0, 0, 0, 0.1);  
+    background-image: url(images/back.png);
+    background-size: cover;
+}
+.labs{
+    margin-left: 0px;
+    margin-top: 5px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.ins{
+    border:none;
+    border-bottom: 2px solid var(--dark01);
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-top: -10px;
+}
+
+.lasn{
+    color: var(--dark01);
+    margin-bottom: -30px;
+    display: flex;
+    justify-content: center;
+}
+.lefin{
+    size: 30px;
+}
+.reg{
+    margin-right: 5%;
+    background-color: var(--dark01);
+    margin-top: 20px;
+    color: var(--light01);
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    position: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.reg a{
+    color: var(--light01);
+    text-decoration: none;
+}
+/*------------------------------form section end------------------------------------*/
+/*---------------------------------input section-------------------------*/
+input{
+    background: transparent;
+    border: none;
+    font-size: large;
+}
+input:focus{
+    outline: none;
+}
+/*------------------------------input section end------------------------------------*/

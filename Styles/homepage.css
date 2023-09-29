@@ -1,0 +1,354 @@
+/* background colors */
+:root{
+    --dark: #06283D;
+    --dark1: #1363DF;
+    --light: #47B5FF;
+    --light1: #DFF6FF;
+    --light0: #fff;
+    --light00: #FFEECC;
+    --light01: white;
+}
+/* header section ......*/
+/*  ........................................................................*/
+header{
+    background-color: var(--dark);
+    height: 80px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 20px;
+    position: fixed;
+    z-index: 50;
+}
+.head{
+    color: var(--light1);
+    font-size: 300%;
+    font-style: oblique;
+    justify-content: baseline;
+    margin-top: 15px;
+}
+.headlogo{
+    height: 80px;
+    width: 80px;
+}
+.accountlogo{
+    height: 50px;
+    width: 50px;
+    margin-left: -50px;
+    margin-top: -15px;
+}
+.rightimg{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    margin-left: 95%;
+    margin-top: 2%;
+}
+/*  ........................................................................*/
+/* header section end */
+body{
+    background-image: url(images/testba.jpg);
+    background-size: cover;
+    display : flex;
+    flex-direction: column;
+}
+.body{
+    margin-left: -8px;
+    margin-right: -8px;
+    height: 600px;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    display: grid;
+}
+
+.record{
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    width: 50%;
+    height: 100px;
+    margin-left: 25%;
+    color: var(--light1);
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.searchbar{
+    display: flex;
+    width: 48%;
+    height: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    background-color: var(--light1);
+    border-radius: 5px;    
+    border: var(--dark1) 4px solid;
+}
+.searchcourses{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 0%;
+    text-decoration: none;
+    background-color: var(--light1);
+}
+#search{
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#search-button, #signup, #login{
+    background-color: var(--dark);
+    color: var(--light1);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 35px;
+}
+#signup, #login{
+   height: 40px;
+   width: 100px;
+}
+
+.signupin{
+    display: flex;
+    width: 48%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    justify-content: space-evenly;
+}
+/*-------------slidebar section----------*/
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    margin-top: 100px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: linear-gradient(180deg, var(--dark) 0%, var(--light) 100%);
+}
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li{
+    list-style: none;
+    color: var(--light0);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li span{
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+.sidebarMenuInner li a{
+    color: var(--light0);
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    box-sizing: border-box;
+    cursor: pointer;
+    position:absolute;
+    z-index: 99;
+    top: 60px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: var(--light0);
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1{
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.a:hover{
+    background-color: var(--light00);
+    
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+/*-------------slidebar section end----------*/
+/*--------------Button and hovers section----------------------*/
+.elab button{
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.cc{
+    display: flex;
+    justify-content: center;
+    margin-top: -3%;
+}
+#viewall{
+    background-color: var(--dark);
+    color: var(--light0);
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+    margin-bottom: 10px;
+}
+#viewall:hover{
+    background-color: var(--light);
+}
+/*-----------------Buttons snd hover section end---------------------------*/
+.desc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: var(--dark);
+    color: var(--light1);
+    border-radius: 25px;
+    font-size: 150%;
+    font-weight: bold;
+    font-style: italic;
+}
+.qualbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+.qual{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-style: oblique;
+    width: 400px;
+    height: 300px;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    color: white;
+    background-color: var(--dark);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+}
+.qual img{
+    height: 100px;
+    width: 100px;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+.qual:hover{
+    transform: scale(1.05); /* Increase card size on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.qual img  h2 p a{
+    transition: opacity 0.3s ease-in-out;
+}
+.qual:hover img p h2 a{
+    opacity: 0.8;
+}
+/*-----------------Testimonal section end---------------------------*/
+/*-----------------footer section-----------------------------*/
+.footer{
+    background-color: var(--dark);
+    display : flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: -8px;
+    margin-right: -8px;
+    width: auto;
+    margin-bottom: -8px;
+    color: var(--light01);
+    margin-top: 145%;
+
+}
+.footer2 a,img{
+    height: 35px;
+    width: 35px;
+    margin-top: -5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.footer a{
+    text-decoration: none;
+    color: var(--light01);
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer h2{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*-----------------footer section end-----------------------------*/
+
+

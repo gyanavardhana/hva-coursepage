@@ -1,0 +1,287 @@
+/* background colors */
+:root{
+    --dark: #06283D;
+    --dark1: #1363DF;
+    --light: #47B5FF;
+    --light1: #DFF6FF;
+    --light0: #fff;
+    --light00: #FFEECC;
+    --light01: white;
+}
+/* header section ......*/
+body{
+    background-image: url(images/back5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* header section ......*/
+/*  ........................................................................*/
+header{
+    background-color: var(--dark);
+    height: 80px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: -100px;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 20px;
+    position: fixed;
+    z-index: 50;
+}
+.head{
+    color: var(--light1);
+    font-size: 300%;
+    font-style: oblique;
+    justify-content: baseline;
+    position: relative;
+    margin-top: 17px;
+}
+.headlogo{
+    height: 80px;
+    width: 80px;
+    margin-left: -50px;
+    
+}
+.accountlogo{
+    height: 50px;
+    width: 50px;
+    margin-left: -50px;
+}
+.rightimg{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    margin-left: 95%;
+    margin-top: 2%;
+}
+/*  ........................................................................*/
+/* header section end */
+/*-------------slidebar----------*/
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    margin-top: 100px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: linear-gradient(180deg, var(--dark) 0%, var(--light) 100%);
+    z-index: 10;
+}
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    position: relative;
+    
+}
+.sidebarMenuInner li{
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li span{
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+.sidebarMenuInner li a{
+    color: var(--light0);
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    box-sizing: border-box;
+    cursor: pointer;
+    position:absolute;
+    z-index: 99;
+    top: 60px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: var(--light0);
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1{
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.a:hover{
+    background-color: var(--light00);
+    
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+/*  ........................................................................*/
+/*-------------slidebar end----------*/
+/*  .................Heading section.......................................................*/
+.heading{
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+    font-style: oblique;
+    background-color: var(--light);
+    color: var(--dark);
+}
+/*  .................Heading section end.......................................................*/
+.listofcertificates{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+
+}
+/*  ......................certificates section..................................................*/
+.certificate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-style: oblique;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    color: var(--dark);
+    background-color: var(--light0);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.certificate img{
+    height: 100px;
+    width: 100px;
+    margin-left: 1%;
+    margin-top: 15%;
+}
+.certificate p{
+    margin-top: -5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 100%;
+}
+.certificate:hover{
+    transform: scale(1.05); /* Increase card size on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.certificate img p h2 a{
+    transition: opacity 0.3s ease-in-out;
+}
+.certificate:hover img p h2 a{
+    opacity: 0.8;
+}
+/*  ......................certificates section end..................................................*/
+/* .......................Button's section................................................*/
+button {
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.certificatebutton {
+    background-color: var(--light);
+    color: var(--light0);
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+    margin-bottom: 10px;
+}
+.certificatebutton:hover {
+    background-color: var(--dark);
+}
+/*  ...................Button's section end.....................................................*/
+/*  ...................footer section.....................................................*/
+.footer{
+    background-color: var(--dark);
+    display : flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: -8px;
+    color: var(--light01);
+
+}
+.footer2 a,img{
+    height: 35px;
+    width: 35px;
+    margin-top: -5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.footer a{
+    text-decoration: none;
+    color: var(--light01);
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer h2{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*  ...................footer section end.....................................................*/
