@@ -1,0 +1,133 @@
+:root{
+    --not: #F1F6F9;
+    --light01: white;
+    --dark01: black;
+}
+/*---------------------------------body section-------------------------*/
+body{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    background-color: var(--not); 
+    background-image: url(images/back1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*-------------------------------body section end-------------------------------------*/
+/*---------------------------------form section-------------------------*/
+.login{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+fieldset{
+    width: 850px;
+    height: 300px;
+    background-color: --var(light01);
+    display: grid;
+    border: none;
+    box-shadow: 2px 0px 4px 6px rgba(0, 0, 0, 0.1);  
+    background-image: url(images/back3.png);
+    background-size: cover;
+}
+.labs{
+    margin-left: 0px;
+    margin-top: 5px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.ins{
+    border:none;
+    border-bottom: 2px solid #9BA4B5;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-top: -10px;
+}
+
+.lasn{
+    color: var(--dark01);
+    margin-top: 30px;
+    display: flex;
+
+}
+ .forget{
+    margin-left: 10px;
+    color: var(--dark01);
+    margin-left: 730px;
+    margin-bottom: -60px;
+    margin-top: 20px;
+}
+.lefin{
+    size: 30px;
+}
+.lef{
+    justify-content: flex-start;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.reg{
+    margin-left: auto;
+    margin-right: 1%;
+    margin-bottom: -10px;
+    background-color: var(--dark01);
+    margin-top: 30px;
+    color: var(--light01);
+    width: 90px;
+    height: 45px;
+    text-align: center;
+    line-height: 50px;
+    position: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.reg a{
+    color: var(--light01);
+    text-decoration: none;
+}
+/*------------------------------form section end------------------------------------*/
+/*---------------------------------connectbox section-------------------------*/
+.con{
+    text-align: center;
+    background-image: url(images/back3.png);
+    background-size: cover;
+}
+.companies{
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: -20px;
+    margin-bottom: 100px;
+}
+.companies img{
+    width: 90px;
+    height: 90px;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:5000;
+    font-display: block;
+}
+p{
+    font-family: cursive;
+    font-weight:5000;
+    font-display: block;
+    font-size: 15px;
+}
+/*----------------------------------connect box section end--------------------------------*/
+input{
+    background: transparent;
+    font-size: larger;
+    border: none;
+}
+input:focus{
+    outline: none;
+}
+/*--------------------------------input section end----------------------------------*/
