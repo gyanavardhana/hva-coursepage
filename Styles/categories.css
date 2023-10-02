@@ -218,12 +218,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     transform: scale(1.05); /* Increase card size on hover */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-.cats img  h2 a{
-    transition: opacity 0.3s ease-in-out;
-}
-.cats:hover img  h2 a{
-    opacity: 0.8;
-}
+
 /*  ....................categories section end....................................................*/
 /*  ...........................footer section.............................................*/
 .footer{
