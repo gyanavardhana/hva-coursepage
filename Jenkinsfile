@@ -7,20 +7,34 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('installin'){
-            steps{
-                echo 'insstlaing dependencies'
+
+        stage('Cloning Git Repo') {
+            steps {
+                script {
+                    sh 'git clone https://github.com/gyanavardhana/hva-coursepage.git'
+                }
             }
         }
-        stage('deploying'){
-            steps{
-                echo 'deploying hosts'
+
+        stage('Installing Dependencies') {
+            steps {
+                script {
+                    sh 'sudo apt install -y apache2'
+                }
             }
         }
-        stage('hosting'){
-            steps{
-                echo 'hosting the files'
+
+        stage('Moving Files') {
+            steps {
+                script {
+                    sh 'sudo cp -r hva-coursepage/* /var/www/html'
+                }
             }
         }
     }
+    post {
+        always {
+            cleanWs()
+        }
+    }   
 }
