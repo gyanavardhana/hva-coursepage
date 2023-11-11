@@ -49,6 +49,7 @@ pipeline {
             script {
                 sh 'sudo rm -r /var/www/html/*'
                 sh 'sudo apt remove --purge -y apache2'
+                sh 'echo bye bye task done'
             }
         }
     }   
