@@ -1,0 +1,45 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Hello
+      run: echo 'Hello World'
+
+    - name: Cloning Git Repo
+      run: git clone https://github.com/gyanavardhana/hva-coursepage.git
+
+    - name: Installing Dependencies
+      run: sudo apt-get install -y apache2
+
+    - name: Moving Files
+      run: sudo cp -r hva-coursepage/* /var/www/html
+
+    - name: Testing
+      run: |
+        curl -I http://20.193.134.120/ > output.txt
+        if grep -q 'HTTP/1.1 200 OK' output.txt; then
+          echo 'The status code is 200 OK'
+        else
+          echo 'The status code is not 200 OK'
+        fi
+
+  cleanup:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clean up
+      run: |
+        sudo rm -r /var/www/html/*
+        sudo apt-get remove --purge -y apache2
+        echo 'bye bye task done'
