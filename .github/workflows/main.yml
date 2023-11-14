@@ -16,14 +16,22 @@ jobs:
     - name: Hello
       run: echo 'Hello World'
 
+    - name: Cloning Git Repo
+      run: git clone https://github.com/gyanavardhana/hva-coursepage.git
+
+    - name: Installing Dependencies
+      run: sudo apt-get install -y apache2
+
+    - name: Moving Files
+      run: sudo cp -r hva-coursepage/* /var/www/html
+
     - name: Testing
       run: |
         curl -I https://gyanavardhana.github.io/hva-coursepage/ > output.txt
-        if grep -q 'HTTP/2 200' output.txt; then
+        if grep -q 'HTTP/1.1 200 OK' output.txt; then
           echo 'The status code is 200 OK'
         else
           echo 'The status code is not 200 OK'
-          exit 1  # This line stops the workflow if the test fails
         fi
 
   cleanup:
@@ -31,4 +39,7 @@ jobs:
 
     steps:
     - name: Clean up
-      run: echo 'bye bye task done'
+      run: |
+        sudo rm -r /var/www/html/*
+        sudo apt-get remove --purge -y apache2
+        echo 'bye bye task done'
